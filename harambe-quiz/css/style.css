@@ -1,0 +1,16 @@
+button {
+  Background: #ffbb00;
+  font-family: comic sans ms;
+  display: block;
+  margin: 0 auto;
+  font-size: 100px;
+  border:10px groove;
+  border-color:#00bb00;
+}
+
+body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/e/ee/Harambe_with_boy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
