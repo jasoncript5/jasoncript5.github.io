@@ -1,0 +1,58 @@
+@import 'https://fonts.googleapis.com/css?family=Fjalla+One';
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  font-size: 5em;
+  border: 10px groove;
+  border-color: #69fddf;
+  margin-top: 10px;
+  margin-bottom: 30px
+}
+
+body {
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+  background-image: url('https://scontent.cdninstagram.com/hphotos-xfp1/t51.2885-15/s320x320/e35/11934629_1609553759305478_734179882_n.jpg');
+  background-repeat: no-repeat;
+  text-decoration: none;
+  background-size: cover;
+  color: #69fd6f;
+  margin-bottom: 10px;
+}
+
+.btn {
+  -webkit-border-radius: 19;
+  -moz-border-radius: 19;
+  border-radius: 19px;
+  color: #ffffff;
+  font-size: 30px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  border: solid #ff66cc 2px;
+  width: 25%;
+  text-align: center;
+  display: inline-block;
+  margin: 130px auto;
+  text-decoration:none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  width: 25%;
+  margin: 130px auto;
+  text-decoration:none;
+}
+
+.name {
+  font-size: 25px;
+  margin: 0 auto;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
