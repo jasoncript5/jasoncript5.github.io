@@ -1,0 +1,32 @@
+@import url ('https://fonts.googleapis.com/css?family=Fjalla+One');
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60%;
+  transform: translateZ(0);
+  transform: translate(-50%, -50%);
+}
+
+p {
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+
+body {
+  border: 10px #69fddf groove;
+  margin: 0 auto;
+  font-size: 20px;
+  margin-bottom: 3em;
+  font-family: 'Fjalla One',sans-serif;
+  width:50%;
+  text-align:center;
+
+}
+
+canvas{
+  border:10px red solid;
+  margin-top:80px;
+  text-align:center;
+}
