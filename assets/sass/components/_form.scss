@@ -1,5 +1,5 @@
 ///
-/// Solid State by HTML5 UP
+/// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -9,34 +9,35 @@
 	form {
 		margin: 0 0 _size(element-margin) 0;
 
-		.field {
-			margin: 0 0 _size(element-margin) 0;
+		&.search {
+			@include icon;
+			position: relative;
 
-			label {
-				margin-top: _size(element-margin) * -0.75;
+			&:before {
+				color: _palette(fg-light);
+				content: '\f002';
+				display: block;
+				height: _size(element-height);
+				left: 0;
+				line-height: _size(element-height);
+				position: absolute;
+				text-align: center;
+				top: 0;
+				width: 2.5em;
 			}
 
-			&:first-child {
-				label {
-					margin-top: 0;
-				}
+			> input:first-child {
+				padding-left: 2.5em;
 			}
-		}
-
-		> :last-child {
-			margin-bottom: 0;
 		}
 	}
 
 	label {
 		color: _palette(fg-bold);
 		display: block;
-		font-family: _font(family-heading);
-		font-size: 0.8em;
-		font-weight: _font(weight-heading-bold);
-		letter-spacing: _font(kern-heading);
-		margin: 0 0 (_size(element-margin) * 0.35) 0;
-		text-transform: uppercase;
+		font-size: 0.9em;
+		font-weight: _font(weight-bold);
+		margin: 0 0 (_size(element-margin) * 0.5) 0;
 	}
 
 	input[type="text"],
@@ -47,9 +48,9 @@
 	textarea {
 		@include vendor('appearance', 'none');
 		background: _palette(border-bg);
-		border-radius: _size(border-radius);
 		border: none;
-		border: solid 2px _palette(border);
+		border: solid 1px _palette(border);
+		border-radius: 0;
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -62,7 +63,8 @@
 		}
 
 		&:focus {
-			border-color: desaturate(lighten(_palette(accent), 6), 3);
+			border-color: _palette(accent);
+			box-shadow: inset 0 0 0 1px _palette(accent);
 		}
 	}
 
@@ -87,13 +89,6 @@
 
 		select::-ms-expand {
 			display: none;
-		}
-	}
-
-	select {
-		option {
-			color: _palette(fg-bold);
-			background: _palette(bg);
 		}
 	}
 
@@ -124,9 +119,6 @@
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
-			font-family: _font(family);
-			text-transform: none;
-			letter-spacing: 0;
 			font-weight: _font(weight);
 			padding-left: (_size(element-height) * 0.6) + 0.75em;
 			padding-right: 0.75em;
@@ -134,8 +126,7 @@
 
 			&:before {
 				background: _palette(border-bg);
-				border-radius: _size(border-radius);
-				border: solid 2px _palette(border);
+				border: solid 1px _palette(border);
 				content: '';
 				display: inline-block;
 				height: (_size(element-height) * 0.6);
@@ -152,14 +143,15 @@
 			&:before {
 				background: _palette(fg-bold);
 				border-color: _palette(fg-bold);
-				content: '\f00c';
 				color: _palette(bg);
+				content: '\f00c';
 			}
 		}
 
 		&:focus + label {
 			&:before {
 				border-color: _palette(accent);
+				box-shadow: 0 0 0 1px _palette(accent);
 			}
 		}
 	}
@@ -167,7 +159,6 @@
 	input[type="checkbox"] {
 		& + label {
 			&:before {
-				border-radius: _size(border-radius);
 			}
 		}
 	}
@@ -200,7 +191,7 @@
 		opacity: 1.0;
 	}
 
-	.polyfill-placeholder {
+	.formerize-placeholder {
 		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}

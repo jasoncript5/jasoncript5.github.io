@@ -4,103 +4,146 @@
 @import 'libs/skel';
 
 /*
-	Solid State by HTML5 UP
+	Future Imperfect by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Basic */
+/* List */
 
-	body {
-		background-color:		_palette(bg);
-		background-image:		url('../../images/bg.jpg');
-		background-size:		cover;
-		background-attachment:	fixed;
-		background-position:	center;
+	ul {
+		&.posts {
+			article {
+				&:after {
+					clear: both;
+					content: '';
+					display: block;
+				}
 
-		&:before {
-			background: transparentize(_palette(bg), 0.2);
+				.image {
+					display: table-cell;
+					vertical-align: top;
+				}
+
+				header {
+					display: table-cell;
+					padding-right: 1em;
+					vertical-align: top;
+				}
+			}
+		}
+	}
+
+/* Author */
+
+	.author {
+		.name {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+/* Post */
+
+	.post {
+		&:after {
+			clear: both;
 			content: '';
 			display: block;
-			height: 100%;
-			left: 0;
-			position: fixed;
+		}
+
+		> header {
+			&:after {
+				clear: both;
+				content: '';
+				display: block;
+			}
+
+			.title {
+				display: table-cell;
+				vertical-align: top;
+				width: 65%;
+			}
+
+			.meta {
+				display: table-cell;
+				vertical-align: top;
+				width: 30%;
+			}
+		}
+
+		> footer {
+			&:after {
+				clear: both;
+				content: '';
+				display: block;
+			}
+
+			.actions {
+				display: inline-block;
+			}
+
+			.stats {
+				display: inline-block;
+				margin-left: 2em;
+			}
+		}
+	}
+
+/* Mini Post */
+
+	.mini-post {
+		.image {
+			display: block;
+		}
+	}
+
+/* Header */
+
+	#header {
+		&:after {
+			clear: both;
+			content: '';
+			display: block;
+		}
+
+		h1 {
+			float: left;
+		}
+
+		.links {
+			float: left;
+		}
+
+		.main {
+			position: absolute;
+			right: 0;
 			top: 0;
-			width: 100%;
-		}
-
-		> * {
-			position: relative;
-			z-index: 1;
-		}
-	}
-
-/* Features */
-
-	.features {
-		article {
-			display: inline-block;
-			width: 45%;
-		}
-	}
-
-/* Menu */
-
-	#menu {
-		.inner {
-			margin: 4em auto;
 		}
 	}
 
 /* Wrapper */
 
 	#wrapper {
-		> header {
-			background: none !important;
-		}
 	}
 
-	.wrapper {
-		&.spotlight {
-			.inner {
-				text-align: left !important;
-			}
+/* Sidebar */
 
-			.image {
-				display: inline-block;
-				margin: 0 _size(section-spacing, large) _size(element-margin) 0 !important;
-				vertical-align: middle;
-				width: 24%;
-			}
-
-			.content {
-				display: inline-block;
-				vertical-align: middle;
-				width: 70%;
-			}
-		}
+	#sidebar {
+		display: table-cell;
+		margin-right: 0;
+		padding-right: _size(section-spacing);
+		vertical-align: top;
 	}
 
-/* Banner */
+/* Main */
 
-	#banner {
-		background: none !important;
-	}
-
-/* Footer */
-
-	#footer {
-		background: none !important;
-
-		.inner {
-			form {
-				display: inline-block;
-				width: 45%;
-			}
-
-			.contact {
-				display: inline-block;
-				width: 45%;
-			}
-		}
+	#main {
+		display: table-cell;
+		vertical-align: top;
 	}
